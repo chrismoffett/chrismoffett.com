@@ -1,4 +1,4 @@
-:root { --ink: #1d1d1b; --muted: #77736c; --bg: #fefefc; --accent: #9d2933; }
+:root { --footer-font: "EB Garamond", Georgia, serif; --ink: #1d1d1b; --muted: #77736c; --bg: #fefefc; --accent: #9d2933; }
 @media (prefers-color-scheme: dark) {
   :root { --ink: #ecebe7; --muted: #9a9893; --bg: #141413; --accent: #e0868d; }
 }
@@ -7,7 +7,10 @@ main { max-width: 31em; margin: 0 auto; padding: 16vh 24px 10vh; font-size: clam
 p { margin: 0 0 .9em; text-wrap: pretty; }
 a { color: inherit; text-decoration: underline; text-decoration-thickness: .05em; text-underline-offset: .22em; text-decoration-color: #9d2933; text-decoration-skip-ink: auto; }
 a:hover, a:focus-visible { text-decoration-thickness: .08em; }
-.contact { font-size: 17px; color: var(--muted); letter-spacing: .03em; margin-top: 2.2em; }
-.contact a { color: var(--muted); }
 /* Run-in name: keep "Moffett" in one text run so the ff ligature holds; no letter-spacing here. */
 .n { font-style: normal; font-weight: 400; font-size: 1.7em; line-height: 0; vertical-align: baseline; }
+/* Footer (option 2b): short red rule, then small-cap links. Change --footer-font to swap the footer typeface. */
+.rule { width: 1.4em; height: 1px; border: 0; background: #9d2933; margin: 2.4em 0 .8em; }
+.contact { font-family: var(--footer-font); font-size: .6em; font-variant-caps: all-small-caps; letter-spacing: .07em; color: #55514b; margin: 0; display: flex; flex-wrap: wrap; gap: .4em 1.8em; }
+.contact a { color: #55514b; text-decoration: none; }
+.contact a:hover, .contact a:focus-visible { text-decoration: underline; text-decoration-thickness: .05em; text-underline-offset: .22em; text-decoration-color: #9d2933; }
