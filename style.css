@@ -1,10 +1,11 @@
 :root {
   --bg: #fefefc;
-  --text: #2a2a2a;
+  --text: #222;
+  --muted: #6b6b6b;
   --accent: #9d2933;
 }
 @media (prefers-color-scheme: dark) {
-  :root { --bg: #1b1a19; --text: #e8e6e1; --accent: #e0868d; }
+  :root { --bg: #1b1a19; --text: #ece9e3; --muted: #9a968f; --accent: #e0868d; }
 }
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }
@@ -13,28 +14,30 @@ body {
   background: var(--bg);
   color: var(--text);
   font-family: "Libre Baskerville", Baskerville, Georgia, serif;
-  font-size: 17px;
-  line-height: 1.7;
 }
 main {
-  max-width: 34rem;
+  max-width: 46rem;
   margin: 0 auto;
-  padding: 18vh 1.25rem 6rem;
+  padding: clamp(3rem, 12vh, 9rem) clamp(1.25rem, 5vw, 3rem) 6rem;
 }
 h1 {
-  font-size: 1.15rem;
-  font-weight: 700;
-  margin: 0 0 2rem;
+  font-size: 0.95rem;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  margin: 0 0 clamp(2rem, 6vh, 4rem);
 }
-p { margin: 0 0 1.4rem; }
+p {
+  font-size: clamp(1.35rem, 1rem + 1.6vw, 2.15rem);
+  line-height: 1.42;
+  margin: 0 0 1.1em;
+  hanging-punctuation: first;
+  text-wrap: pretty;
+}
 a {
   color: var(--accent);
   text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 0.18em;
+  text-decoration-thickness: 0.06em;
+  text-underline-offset: 0.16em;
 }
-a:hover { text-decoration-thickness: 2px; }
-@media (max-width: 480px) {
-  body { font-size: 16px; }
-  main { padding-top: 10vh; }
-}
+a:hover { text-decoration-thickness: 0.1em; }
