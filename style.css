@@ -15,3 +15,11 @@ p { margin: 0 0 1.1em; text-wrap: pretty; }
 a { color: var(--accent); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .18em; }
 .contact { font-size: .55em; color: var(--muted); margin-top: 2.5em; letter-spacing: .02em; }
 .contact a { color: var(--muted); }
+.name {
+  font-weight: 400;
+  font-size: clamp(3rem, 9vw, 6.5rem);
+  line-height: 1;
+  margin: 0 0 0.45em;
+  font-variant-ligatures: common-ligatures;
+}
+.name .lig { color: var(--accent); }
