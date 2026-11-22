@@ -1,4 +1,4 @@
-:root { --footer-font: "EB Garamond", Georgia, serif; --ink: #1d1d1b; --muted: #77736c; --bg: #fefefc; --accent: #9d2933; }
+:root { --footer-font: "EB Garamond", Georgia, serif; --ink: #2a2723; --muted: #77736c; --bg: #f7f5ee; --accent: #9d2933; }
 @media (prefers-color-scheme: dark) {
   :root { --ink: #ecebe7; --muted: #9a9893; --bg: #141413; --accent: #e0868d; }
 }
