@@ -1,0 +1,40 @@
+:root {
+  --bg: #fefefc;
+  --text: #2a2a2a;
+  --accent: #9d2933;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #1b1a19; --text: #e8e6e1; --accent: #e0868d; }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Libre Baskerville", Baskerville, Georgia, serif;
+  font-size: 17px;
+  line-height: 1.7;
+}
+main {
+  max-width: 34rem;
+  margin: 0 auto;
+  padding: 18vh 1.25rem 6rem;
+}
+h1 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 0 0 2rem;
+}
+p { margin: 0 0 1.4rem; }
+a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+a:hover { text-decoration-thickness: 2px; }
+@media (max-width: 480px) {
+  body { font-size: 16px; }
+  main { padding-top: 10vh; }
+}
