@@ -9,4 +9,4 @@ a { color: inherit; text-decoration: underline; text-decoration-thickness: 1px; 
 .contact { font-size: 17px; color: var(--muted); letter-spacing: .03em; margin-top: 2.2em; }
 .contact a { color: var(--muted); }
 /* Run-in name: keep "Moffett" in one text run so the ff ligature holds; no letter-spacing here. */
-.n { font-style: italic; font-weight: 400; font-size: 1.5em; line-height: 0; vertical-align: baseline; }
+.n { font-style: normal; font-weight: 400; font-size: 1.7em; line-height: 0; vertical-align: baseline; }
