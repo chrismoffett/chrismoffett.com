@@ -13,11 +13,14 @@ One-page personal site, plain HTML and CSS, published with GitHub Pages. Edit `i
 
 ## Going live on chrismoffett.com (not done yet)
 
+The `CNAME` file in this repo already holds `chrismoffett.com`. GitHub says to add the custom domain in Pages before changing DNS, so do step 5's custom-domain part right after step 1.
+
 1. Settings → Pages → Deploy from a branch → `main`, `/ (root)`. Preview: https://chrismoffett.github.io/chrismoffett.com/
 2. Export the full zone from EuroVPS first, as a backup.
 3. In the EuroVPS DNS zone for chrismoffett.com, change only these:
    - apex A records → 185.199.108.153, 185.199.109.153, 185.199.110.153, 185.199.111.153 (replacing 77.235.54.106)
    - `www` CNAME → chrismoffett.github.io
+   - `mail` and `ftp`: today CNAMEs to the apex; change each to an A record for 77.235.54.106 so they stay on the old server
 4. Leave every mail record alone: the Google Workspace MX, SPF (Google + MailerLite), MailerLite and Google verification TXT, and DMARC. Also add the pending TXT `mailerlite-domain-verification=ea01e323ee3683ff05f44059c2c9e5eb7d591581`.
-5. Then add `chrismoffett.com` as the custom domain in Pages (this creates a CNAME file), and turn on Enforce HTTPS once the certificate is issued.
+5. Add `chrismoffett.com` as the custom domain in Pages (matches the `CNAME` file), and turn on Enforce HTTPS once the certificate is issued.
 6. aestheticrelationalexercises.com stays on EuroVPS, on the same nameservers. Do not cancel the EuroVPS account.
