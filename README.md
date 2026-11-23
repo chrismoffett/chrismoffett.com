@@ -29,4 +29,5 @@ The `CNAME` file in this repo already holds `chrismoffett.com`. GitHub says to a
 
 - `index.html` head: title, meta description, canonical `https://chrismoffett.com/`, Open Graph and Twitter card tags (text only, no image), and a JSON-LD `ProfilePage` whose `Person.sameAs` lists every public profile. Take profile URLs from the Notion page "Public profiles". Bump `dateModified` and the sitemap `lastmod` when the page text changes.
 - `sitemap.xml` lists the one page; `robots.txt` points to it.
+- `404.html` forwards any unknown URL (old WordPress links such as /student-work) to the homepage at once. GitHub still sends a 404 status, so Google drops the old URLs instead of indexing duplicates.
 - Google Search Console: the zone already holds a `google-site-verification` TXT record (from the Google Workspace setup), so adding a Domain property for chrismoffett.com from the same Google account may verify at once; otherwise add the TXT record Search Console gives. Then submit `https://chrismoffett.com/sitemap.xml`.
