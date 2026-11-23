@@ -8,7 +8,7 @@ One-page personal site, plain HTML and CSS, published with GitHub Pages. Edit `i
 - Run-in name "Chris Moffett" in roman at 1.7em. Keep "Moffett" in one text run with no letter-spacing so the ff ligature survives.
 - Colours: background #f7f5ee, text #2a2723, accent #9d2933, footer grey #55514b. Dark mode has its own palette.
 - Links: full red underline, .05em, thickening to .08em on hover, offset .22em.
-- Footer: short red rule (two text lines above, .44em below), then CV / Google Scholar / Instagram in EB Garamond small caps, underlined only on hover. Font is set by `--footer-font`.
+- Footer: short red rule (two text lines above, .44em below), then CV / Google Scholar / Academia / Instagram / Email in EB Garamond small caps, underlined only on hover. Font is set by `--footer-font`.
 - Email: the mailto in the text is HTML-entity encoded. Never write the address in plain text. Commits use a noreply address.
 
 ## Going live on chrismoffett.com (not done yet)
