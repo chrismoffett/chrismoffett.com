@@ -29,4 +29,4 @@ The `CNAME` file in this repo already holds `chrismoffett.com`. GitHub says to a
 
 - `index.html` head: title, meta description, canonical `https://chrismoffett.com/`, Open Graph and Twitter card tags (text only, no image), and a JSON-LD `ProfilePage` whose `Person.sameAs` lists every public profile. Take profile URLs from the Notion page "Public profiles". Bump `dateModified` and the sitemap `lastmod` when the page text changes.
 - `sitemap.xml` lists the one page; `robots.txt` points to it.
-- Google Search Console: the domain is verified by the `google-site-verification` TXT record already in the EuroVPS zone. Submit `https://chrismoffett.com/sitemap.xml` there.
+- Google Search Console: the zone already holds a `google-site-verification` TXT record (from the Google Workspace setup), so adding a Domain property for chrismoffett.com from the same Google account may verify at once; otherwise add the TXT record Search Console gives. Then submit `https://chrismoffett.com/sitemap.xml`.
