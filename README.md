@@ -24,3 +24,10 @@ The `CNAME` file in this repo already holds `chrismoffett.com`. GitHub says to a
 4. Leave every mail record alone: the Google Workspace MX, SPF (Google + MailerLite), MailerLite and Google verification TXT, and DMARC. Also add the pending TXT `mailerlite-domain-verification=ea01e323ee3683ff05f44059c2c9e5eb7d591581`.
 5. Add `chrismoffett.com` as the custom domain in Pages (matches the `CNAME` file), and turn on Enforce HTTPS once the certificate is issued.
 6. aestheticrelationalexercises.com stays on EuroVPS, on the same nameservers. Do not cancel the EuroVPS account.
+
+## Search (2026-11-23)
+
+- `index.html` head: title, meta description, canonical `https://chrismoffett.com/`, Open Graph and Twitter card tags (text only, no image), and a JSON-LD `ProfilePage` whose `Person.sameAs` lists every public profile. Take profile URLs from the Notion page "Public profiles". Bump `dateModified` and the sitemap `lastmod` when the page text changes.
+- `sitemap.xml` lists the one page; `robots.txt` points to it.
+- `404.html` forwards any unknown URL (old WordPress links such as /student-work) to the homepage at once. GitHub still sends a 404 status, so Google drops the old URLs instead of indexing duplicates.
+- Google Search Console: the zone already holds a `google-site-verification` TXT record (from the Google Workspace setup), so adding a Domain property for chrismoffett.com from the same Google account may verify at once; otherwise add the TXT record Search Console gives. Then submit `https://chrismoffett.com/sitemap.xml`.
